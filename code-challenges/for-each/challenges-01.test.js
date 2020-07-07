@@ -8,6 +8,7 @@ Write a function named greeting that takes in a string and returns the string in
 Then, write a function named speaker that takes in a string and a callback function. The speaker function should return the string in all uppercase letters only by invoking the callback.
 ------------------------------------------------------------------------------------------------ */
 
+
 const greeting = (word) => word.toUpperCase();
 
 
@@ -29,6 +30,7 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
+
 
 const addValues = (arr, value) => {
   // Solution code here...
