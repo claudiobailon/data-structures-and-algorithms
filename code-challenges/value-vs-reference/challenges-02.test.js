@@ -22,10 +22,8 @@ CHALLENGE 2
 Write a function that appends ' The end.' to a string, and returns the modified string. The original source string should not be modified.
 
 ------------------------------------------------------------------------------------------------ */
-
-const appendTheEnd = (str) => {
-  // Solution code here...
-};
+// https://www.geeksforgeeks.org/javascript-string-prototype-concat-function/
+const appendTheEnd = (str) => str.concat(` The end.`);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
