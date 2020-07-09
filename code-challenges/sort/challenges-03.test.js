@@ -9,14 +9,6 @@ CHALLENGE 1 - Review
 Write a function named changeAllClassNames that uses jQuery to select all each li and add a class of "fruit";
 
 ------------------------------------------------------------------------------------------------ */
-// describe('Testing challenge 1', () => {
-//   test('It should add a class of fruit to all the list items', () => {
-//     changeAllClassNames();
-
-//     expect($('li.apple').hasClass('fruit')).toBe(true);
-//     expect($('li.orange').hasClass('fruit')).toBe(true);
-//   });
-// });
 
 let $ = createSnippetWithJQuery(`
 <ul id="fruits">
@@ -37,7 +29,10 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort((a,b) => {
+    return b-a;
+    });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
