@@ -69,15 +69,22 @@ const isCapitalized = (str) => {
   let stringOfCaps = str.match(regex) ;
   return stringOfCaps || [];
 };
-
+//https://stackoverflow.com/questions/56724492/returning-an-empty-array-instead-of-null/56724530
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
+
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = /^[A-J]\w+/g;
+  let cityArray= [];
+  arr.forEach(city => {
+     city.match(regex) ? cityArray.push(city) : null;
+     // Site suggested not to use ternary here but showed me how, I decided to use it as practice. https://stackoverflow.com/questions/60426449/array-push-with-ternary-operator
+  });
+  return cityArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
