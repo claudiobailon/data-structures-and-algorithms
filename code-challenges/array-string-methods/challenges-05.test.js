@@ -129,7 +129,19 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  const justIngredients = recipe.ingredients;
+  result.push(justIngredients[0].slice(-8))
+  result.push(justIngredients[1].slice(-4))
+  result.push(justIngredients[2].slice(-11))
+  result.push(justIngredients[3].slice(-5))
+  result.push(justIngredients[4].slice(-16))
+  result.push(justIngredients[5].slice(-12))
+  result.push(justIngredients[6].slice(-11))
+  result.push(justIngredients[7].slice(-13))
+  result.push(justIngredients[8].slice(-8))
+  result.push(justIngredients[9].slice(-13))
+  result.push(justIngredients[10].slice(-11))
+
   return result;
 };
 
