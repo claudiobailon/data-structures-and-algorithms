@@ -87,8 +87,19 @@ This function should then raise 2 to the power of the resulting numbers, returni
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
-const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+const divisibleByFiveTwoToThePower = (input) => { 
+  const answerArray = [];
+  input.forEach(innerArray => {
+    const filteredAndPoweredArray = innerArray.reduce((accumulator, currentValue) => {
+      if(currentValue % 5 === 0 && Number.isInteger(currentValue)){
+        const twoToThePower = Math.pow(2, currentValue);
+        accumulator.push(twoToThePower);
+      } 
+      return accumulator;
+      }, [])
+      answerArray.push(filteredAndPoweredArray);
+    })
+    return answerArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
