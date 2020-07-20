@@ -49,8 +49,14 @@ Note: You might need to use the same method more than once.
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
-const count = (target, input) => {
-  // Solution code here...
+const count = (target, input) => {  
+  const oneArray = input.reduce((newArray, currentIndex) => newArray.concat(currentIndex), [])//Help from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
+  const targetCount = oneArray.reduce((innerArrayCount, currentNum) => { 
+      currentNum === target ? innerArrayCount++: null;
+      return innerArrayCount;
+    }, 0);
+  return targetCount;
 };
 
 /* ------------------------------------------------------------------------------------------------
