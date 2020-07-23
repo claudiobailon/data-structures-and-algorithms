@@ -32,7 +32,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  const firstLettersArray = arr.map(word => word.slice(0,1));
+  const firstLettersArray = arr.map(word => word.substring(0,1));
   return firstLettersArray;
 };
 
@@ -45,7 +45,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 ------------------------------------------------------------------------------------------------ */
 
 const findHappiness = (arr) => {
-  // Solution code here...
+  const smileyArray = arr.filter(word => word.includes(':)'));
+  return smileyArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
