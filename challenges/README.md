@@ -1,6 +1,7 @@
 # Table of Contents
-[Challenge 01: Reverse an Array](#reverse-an-array)
-[Challenge 02: Array Shift](#reverse-an-array)
+[Challenge 01: Reverse an Array](#reverse-an-array)<br>
+[Challenge 02: Array Shift](#array-shift)<br>
+[Challenge 03: Binary Search](#binary-search)<br>
 
 
 ## Reverse an Array
@@ -20,3 +21,13 @@ Time: O(n)<br>
 Space O(n)
 ### Solution
 ![Whiteboard](src/test/resources/whitboard.png)
+
+## Binary Search
+This method will check to see if a value is in any given array.
+### Challenge
+Write a function called binarySearch that performs a search to see if a value is in an array. If there is, it returns the index of that value, if not, it returns -1.
+### Approach & Efficiency
+Time: O(n)<br>
+Space O(n)
+### Solution
+![Whiteboard](src/test/resources/lab02whiteboard.png)
