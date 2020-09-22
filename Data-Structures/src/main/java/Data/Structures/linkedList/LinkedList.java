@@ -4,12 +4,12 @@ public class LinkedList {
 
     public static void main(String[] Args){
         LinkedList list = new LinkedList();
-//        list.insert(4);
-//        list.insert(2);
-//        list.insert(6);
-//        list.insert(5);
-//        System.out.println(list.includes(6));
-//        System.out.println(list);
+        list.insert(4);
+        list.insert(2);
+        list.insert(6);
+        list.insert(5);
+        System.out.println(list.includes(6));
+        System.out.println(list);
         System.out.println(list.head);
     }
 
