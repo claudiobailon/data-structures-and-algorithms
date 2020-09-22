@@ -73,3 +73,5 @@ Space O(1)
 InsertAfter:
 Time: O(n)<br>
 Space O(1)
+### Solution
+![Whiteboard](src/test/resources/06whiteboard.png)
