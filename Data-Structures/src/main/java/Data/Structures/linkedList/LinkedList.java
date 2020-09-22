@@ -2,15 +2,17 @@ package Data.Structures.linkedList;
 
 public class LinkedList {
 
-    public static void main(String[] Args){
+    public static void main(String[] Args) throws Exception {
         LinkedList list = new LinkedList();
         list.insert(4);
         list.insert(2);
         list.insert(6);
         list.insert(5);
+        list.append(3);
+        list.insertBefore(2,9);
+        list.insertAfter(2,7);
         System.out.println(list.includes(6));
         System.out.println(list);
-        System.out.println(list.head);
     }
 
     public class Node {
@@ -65,4 +67,58 @@ public class LinkedList {
        return false;
    }
 
-}
+   public void append(int newValue){
+       Node newNode = new Node(newValue);
+       if(head == null){
+           head = newNode;
+           tail = newNode;
+           return;
+       }
+       newNode.next = null;
+
+       Node last = head;
+       while( last.next != null){
+           last = last.next;
+       }
+       last.next = newNode;
+       return;
+
+   }
+    public void insertBefore(int numToSearch, int newValue) throws Exception {
+        Node previousChecked = head;
+        if (head.value == numToSearch) {
+            insert(newValue);
+        }
+        do {
+            if (previousChecked.next == null) {
+                throw new Exception("That value is not in this linked list.");
+            }
+            if (previousChecked.next.value == numToSearch) {
+                Node newNode = new Node(newValue);
+                newNode.next = previousChecked.next;
+                previousChecked.next = newNode;
+                return;
+            } else {
+                previousChecked = previousChecked.next;
+            }
+        } while (previousChecked != null);
+    }
+
+   
+
+  public void insertAfter(int numToSearch, int newValue) throws Exception {
+      Node currentNode = head;
+      while(currentNode != null){
+          if(currentNode.value == numToSearch){
+              Node newNode = new Node(newValue);
+              newNode.next = currentNode.next;
+              currentNode.next = newNode;
+              return;
+          }
+          currentNode = currentNode.next;
+      }
+      throw new Exception("That value is not in this linked list.");
+  }
+
+  }
+

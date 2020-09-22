@@ -2,7 +2,9 @@
 [Challenge 01: Reverse an Array](#reverse-an-array)<br>
 [Challenge 02: Array Shift](#array-shift)<br>
 [Challenge 03: Binary Search](#binary-search)<br>
-[Challenge 05: Linked-List](#singly-linked-list);
+[Challenge 05: Linked-List](#singly-linked-list)<br>
+[Challenge 0: Linked-List Part Two](#linked-list-part-two) <br>
+
 
 ## Reverse an Array
 This method will reverse the order of a given array.
@@ -55,3 +57,19 @@ This method takes in an integer and creates a node with that interger as it's va
 This method returns a string showing the linked list
 #### Includes
 This method takes in an integer and checks all node values, returning true if that value is found and false if not.
+
+## Linked List Part Two
+This is an expansion of methods on the previous linked list.
+
+### Challenge
+Write three new methods.  One called append that takes in an integer and appends it to the linked list, one called insertBefore that takes in two integers and searches the linked list for the value of the first int and prepends the node with a node with the value of the second int, and finally, one called insertAfter that takes in two integers and searches the linked list for a node with the value of the first int then appends that node with a node that has a value of the second int. 
+### Approach and Efficiency
+Append:
+Time: O(1)<br>
+Space O(n)
+InsertBefore:
+Time: O(n)<br>
+Space O(1)
+InsertAfter:
+Time: O(n)<br>
+Space O(1)
