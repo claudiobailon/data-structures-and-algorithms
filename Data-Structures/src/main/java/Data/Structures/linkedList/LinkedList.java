@@ -7,7 +7,8 @@ public class LinkedList {
         list.insert(4);
         list.insert(2);
         list.insert(6);
-        System.out.println(list.includes(5));
+        list.insert(5);
+        System.out.println(list.includes(6));
         System.out.println(list);
     }
 
@@ -15,10 +16,12 @@ public class LinkedList {
         public int value;
         public Node next;
 
+
         public  Node(int value){
             this.value = value;
             this.next = null;
         }
+
     }
 
     public Node head = null;
@@ -33,18 +36,17 @@ public class LinkedList {
             newNode.next = this.head;
             this.head = newNode;
         }
+
    }
-   public String toString() {
-       if (this.head == null) {
+    public String toString(){
+        return toString(this.head);
+    }
+
+   public String toString(Node current) {
+       if (current == null) {
            return "NULL";
        }
-       String output = String.format("{%s}", this.head.toString());
-       Node nextNode = this.head.next;
-       while (nextNode != null) {
-           output += String.format(" -> {%s}", nextNode.toString());
-           nextNode = nextNode.next;
-       }
-       output += " -> NULL";
+       String output = String.format("{%d} -> %s", current.value,toString(current.next));
        return output;
    }
    public boolean includes ( int value){
