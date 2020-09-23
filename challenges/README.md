@@ -3,7 +3,8 @@
 [Challenge 02: Array Shift](#array-shift)<br>
 [Challenge 03: Binary Search](#binary-search)<br>
 [Challenge 05: Linked-List](#singly-linked-list)<br>
-[Challenge 0: Linked-List Part Two](#linked-list-part-two) <br>
+[Challenge 06: Linked-List Part Two](#linked-list-part-two) <br>
+[Challenge 07: Linked-List Part Three](#linked-list-part-three) <br>
 
 
 ## Reverse an Array
@@ -75,3 +76,15 @@ Time: O(n)<br>
 Space O(1)
 ### Solution
 ![Whiteboard](src/test/resources/06whiteboard.png)
+
+## Linked List Part Three
+This is adds the llKthFromTheEnd method. 
+
+### Challenge
+Write a new method that takes in k and returns the value of the kth from the end node of a linked list.
+### Approach and Efficiency
+Time: O(n)<br>
+Space O(1)
+
+### Solution
+![Whiteboard](src/test/resources/lab07whiteboard.png)

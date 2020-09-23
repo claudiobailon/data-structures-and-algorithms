@@ -1,4 +1,4 @@
-package Data.Structures.linkedList;
+package data.Structures.linkedList;
 
 public class LinkedList {
 
@@ -13,16 +13,26 @@ public class LinkedList {
         list.insertAfter(2,7);
         System.out.println(list.includes(6));
         System.out.println(list);
+        System.out.println(list.llKthFromTheEnd(2));
+        System.out.println(list.llKthFromTheEnd(3));
+        System.out.println(list.llKthFromTheEnd(4));
+        System.out.println(list.llKthFromTheEnd(5));
+        System.out.println(list.llKthFromTheEnd(6));
+//        System.out.println(list.llKthFromTheEnd(10));
+
     }
 
     public class Node {
         public int value;
         public Node next;
+        public Node prev;
 
 
         public  Node(int value){
             this.value = value;
             this.next = null;
+            this.prev = null;
+
         }
 
     }
@@ -84,7 +94,7 @@ public class LinkedList {
        return;
 
    }
-    public void insertBefore(int numToSearch, int newValue) throws Exception {
+   public void insertBefore(int numToSearch, int newValue) throws Exception {
         Node previousChecked = head;
         if (head.value == numToSearch) {
             insert(newValue);
@@ -118,6 +128,31 @@ public class LinkedList {
           currentNode = currentNode.next;
       }
       throw new Exception("That value is not in this linked list.");
+  }
+
+  public String llKthFromTheEnd(int k) throws Exception{
+//Solution help from https://leetcode.com/problems/remove-nth-node-from-end-of-list/solution/
+      Node node = head;
+       Node first = node;
+       Node second = node;
+      if(k < 0){
+          throw new Exception("K cannot be negative");
+      }
+      int listLength = 0;
+       for(int i =0; i < k + 1; i++){
+           first = first.next;
+           listLength ++;
+       }
+        while(first != null){
+            first = first.next;
+            second = second.next;
+            System.out.println(listLength);
+        }
+      if(k >= listLength){
+          throw new Exception("K is larger than the list");
+      }
+//        int kthValue = second.value;
+        return String.format("This returns %d", second.value);
   }
 
   }

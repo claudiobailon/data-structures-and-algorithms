@@ -1,4 +1,4 @@
-package Data.Structures.linkedList;
+package data.Structures.linkedList;
 
 import org.junit.Test;
 
@@ -56,8 +56,30 @@ public class LinkedListTest {//not sure why it won't let me run these tests. It 
         testList.insert(3);
         testList.insert(4);
         testList.insert(5);
-        testList.insertBefore(4, 9);
+        testList.insertAfter(4, 9);
         assertEquals("{5} -> {4} -> {9} -> {3} -> NULL", testList.toString());
+    }
+    @Test public void testllKthFromTheEnd() throws Exception {
+        LinkedList testList = new LinkedList();
+        testList.insert(3);
+        testList.insert(4);
+        testList.insert(5);
+        testList.insertAfter(4, 9);
+
+        assertEquals("This returns 3", testList.llKthFromTheEnd(0));
+        assertEquals("This returns 9", testList.llKthFromTheEnd(1));
+        assertEquals("This returns 4", testList.llKthFromTheEnd(2));
+        assertEquals("This returns 5", testList.llKthFromTheEnd(3));
+
+    }
+    @Test public void testExemptiosllKthFromTheEnd() throws Exception {
+        LinkedList testList = new LinkedList();
+        testList.insert(3);
+        testList.insert(4);
+        testList.insert(5);
+        testList.insertAfter(4, 9);
+        assertEquals("This returns 5", testList.llKthFromTheEnd(-1));
+        assertEquals("This returns 5", testList.llKthFromTheEnd(5));
     }
 
 
