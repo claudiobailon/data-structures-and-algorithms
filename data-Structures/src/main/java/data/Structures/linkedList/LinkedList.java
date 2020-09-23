@@ -19,6 +19,14 @@ public class LinkedList {
         System.out.println(list.llKthFromTheEnd(5));
         System.out.println(list.llKthFromTheEnd(6));
 //        System.out.println(list.llKthFromTheEnd(10));
+        LinkedList l2 = new LinkedList();
+        l2.insert(5);
+        l2.insert(8);
+        l2.insert(9);
+        l2.insert(3);
+        System.out.println(LinkedList.zipLists(list,l2));
+
+
 
     }
 
@@ -154,6 +162,34 @@ public class LinkedList {
 //        int kthValue = second.value;
         return String.format("This returns %d", second.value);
   }
+  public static  Node zipLists(LinkedList l1, LinkedList l2){
+       Node n1 = l1.head;
+       Node n2 = l2.head;
+       if(n1 == null){
+           return n2;
+       }
+       if(n2 == null){
+           return n1;
+       }
+       Node result = n1;
+       while(n1 != null && n2 != null){
+           Node temp1 = n1.next;
+           Node temp2 = n2.next;
+
+           if( n1.next != null){
+               n2.next =n1;
+           }
+           n1.next = n2;
+           
+           n1 = temp1;
+           n2 = temp2;
+
+       }
+
+       return result;
+//       return l1.head;
+
+    }
 
   }
 
