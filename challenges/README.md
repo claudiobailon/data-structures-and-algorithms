@@ -5,6 +5,8 @@
 [Challenge 05: Linked-List](#singly-linked-list)<br>
 [Challenge 06: Linked-List Part Two](#linked-list-part-two) <br>
 [Challenge 07: Linked-List Part Three](#linked-list-part-three) <br>
+[Challenge 08: Linked-List zipList](#linked-list-zipList) <br>
+
 
 
 ## Reverse an Array
@@ -88,3 +90,14 @@ Space O(1)
 
 ### Solution
 ![Whiteboard](src/test/resources/lab07whiteboard.png)
+
+## Linked List zipList
+This is adds the zipList method to LinkedList
+
+### Challenge
+Write a new method that takes in two linkedlists and zips them together.
+Time: O(n)<br>
+Space O(1)
+
+### Solution
+![Whiteboard](src/test/resources/08whiteboard.png)
