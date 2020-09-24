@@ -81,6 +81,19 @@ public class LinkedListTest {//not sure why it won't let me run these tests. It 
 //        assertEquals("This returns 5", testList.llKthFromTheEnd(-1));
 //        assertEquals("This returns 5", testList.llKthFromTheEnd(5));
 //    }
+@Test public void testZipLists() throws Exception {
+    LinkedList testList1 = new LinkedList();
+    LinkedList testList2 = new LinkedList();
+    testList1.insert(6);
+    testList1.insert(2);
+    testList1.insert(8);
 
+    testList2.insert(1);
+    testList2.insert(5);
+    testList2.insert(9);
+
+    assertEquals("This returns 3", LinkedList.zipLists(testList1, testList2));
+
+}
 
 }

@@ -20,11 +20,31 @@ public class LinkedList {
         System.out.println(list.llKthFromTheEnd(6));
 //        System.out.println(list.llKthFromTheEnd(10));
         LinkedList l2 = new LinkedList();
+        LinkedList l3 = new LinkedList();
         l2.insert(5);
         l2.insert(8);
         l2.insert(9);
         l2.insert(3);
-        System.out.println(LinkedList.zipLists(list,l2));
+        System.out.println(list);
+        System.out.println(l2);
+        System.out.println(l3);
+
+
+        int testNode = LinkedList.zipLists(list,l2);
+        int testNode2 = LinkedList.zipLists(l2, list);
+        int testNode3 = LinkedList.zipLists(l3,l2);
+        int testNode4 = LinkedList.zipLists(l2, l3);
+        int testNode5 = LinkedList.zipLists(list, l3);
+        int testNode6 = LinkedList.zipLists(l3, list);
+//        LinkedList zippedList = testNode;
+//        System.out.println(l3);
+//        System.out.println(l3.toString());
+        System.out.println("This is what we are getting:" + testNode);
+        System.out.println("This is what we are getting:" + testNode2);
+        System.out.println("This is what we are getting:" + testNode3);
+        System.out.println("This is what we are getting:" + testNode4);
+        System.out.println("This is what we are getting:" + testNode5);
+        System.out.println("This is what we are getting:" + testNode6);
 
 
 
@@ -59,17 +79,18 @@ public class LinkedList {
         }
 
    }
+
     public String toString(){
         return toString(this.head);
     }
-
-   public String toString(Node current) {
+    public String toString(Node current) {
        if (current == null) {
            return "NULL";
        }
        String output = String.format("{%d} -> %s", current.value,toString(current.next));
        return output;
    }
+
    public boolean includes ( int value){
        Node nextNode = this.head.next;
 
@@ -102,6 +123,7 @@ public class LinkedList {
        return;
 
    }
+
    public void insertBefore(int numToSearch, int newValue) throws Exception {
         Node previousChecked = head;
         if (head.value == numToSearch) {
@@ -122,9 +144,7 @@ public class LinkedList {
         } while (previousChecked != null);
     }
 
-   
-
-  public void insertAfter(int numToSearch, int newValue) throws Exception {
+    public void insertAfter(int numToSearch, int newValue) throws Exception {
       Node currentNode = head;
       while(currentNode != null){
           if(currentNode.value == numToSearch){
@@ -154,7 +174,7 @@ public class LinkedList {
         while(first != null){
             first = first.next;
             second = second.next;
-            System.out.println(listLength);
+//            System.out.println(listLength);
         }
       if(k >= listLength){
           throw new Exception("K is larger than the list");
@@ -162,14 +182,15 @@ public class LinkedList {
 //        int kthValue = second.value;
         return String.format("This returns %d", second.value);
   }
-  public static  Node zipLists(LinkedList l1, LinkedList l2){
+
+  public static  int zipLists(LinkedList l1, LinkedList l2){
        Node n1 = l1.head;
        Node n2 = l2.head;
        if(n1 == null){
-           return n2;
+           return n2.value;
        }
        if(n2 == null){
-           return n1;
+           return n1.value;
        }
        Node result = n1;
        while(n1 != null && n2 != null){
@@ -177,16 +198,16 @@ public class LinkedList {
            Node temp2 = n2.next;
 
            if( n1.next != null){
-               n2.next =n1;
+               n1.next =n2;
            }
-           n1.next = n2;
-           
+           n2.next = temp1;
+
            n1 = temp1;
            n2 = temp2;
 
        }
 
-       return result;
+       return result.value;
 //       return l1.head;
 
     }
