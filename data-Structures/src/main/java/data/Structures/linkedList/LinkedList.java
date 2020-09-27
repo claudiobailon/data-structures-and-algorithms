@@ -9,7 +9,7 @@ public class LinkedList {
         list.insert(6);
         list.insert(5);
         list.append(3);
-        list.insertBefore(2,9);
+        list.insertBefore(2,1);
         list.insertAfter(2,7);
         System.out.println(list.includes(6));
         System.out.println(list);
@@ -25,26 +25,30 @@ public class LinkedList {
         l2.insert(8);
         l2.insert(9);
         l2.insert(3);
-        System.out.println(list);
-        System.out.println(l2);
-        System.out.println(l3);
+        System.out.println("List one: " + list);
+        System.out.println("list two: " + l2);
+        System.out.println("list three: "+ l3);
 
+        LinkedList test = new LinkedList();
+        LinkedList test2 = new LinkedList();
+        LinkedList test3 = new LinkedList();
+        LinkedList test4 = new LinkedList();
+        LinkedList test5 = new LinkedList();
+        LinkedList test6 = new LinkedList();
 
-        int testNode = LinkedList.zipLists(list,l2);
-        int testNode2 = LinkedList.zipLists(l2, list);
-        int testNode3 = LinkedList.zipLists(l3,l2);
-        int testNode4 = LinkedList.zipLists(l2, l3);
-        int testNode5 = LinkedList.zipLists(list, l3);
-        int testNode6 = LinkedList.zipLists(l3, list);
-//        LinkedList zippedList = testNode;
-//        System.out.println(l3);
+//        test.head = LinkedList.zipLists(list,l2);
+        test2.head = LinkedList.zipLists(l2, list);
+//        test3.head = LinkedList.zipLists(l3,l2);
+//        test4.head = LinkedList.zipLists(l2, l3);
+//        test5.head = LinkedList.zipLists(list, l3);
+//        test6.head = LinkedList.zipLists(l3, list);
 //        System.out.println(l3.toString());
-        System.out.println("This is what we are getting:" + testNode);
-        System.out.println("This is what we are getting:" + testNode2);
-        System.out.println("This is what we are getting:" + testNode3);
-        System.out.println("This is what we are getting:" + testNode4);
-        System.out.println("This is what we are getting:" + testNode5);
-        System.out.println("This is what we are getting:" + testNode6);
+//        System.out.println("List one and list two:" + test);
+        System.out.println("List two and list one:" + test2);
+//        System.out.println("List three and list two:" + test3);
+//        System.out.println("List two and list three:"+ test4);
+//        System.out.println("List one and list three:" + test5);
+//        System.out.println("List three and list one:" + test6);
 
 
 
@@ -183,32 +187,34 @@ public class LinkedList {
         return String.format("This returns %d", second.value);
   }
 
-  public static  int zipLists(LinkedList l1, LinkedList l2){
+  public static  Node zipLists(LinkedList l1, LinkedList l2) {
        Node n1 = l1.head;
        Node n2 = l2.head;
-       if(n1 == null){
-           return n2.value;
-       }
-       if(n2 == null){
-           return n1.value;
-       }
-       Node result = n1;
-       while(n1 != null && n2 != null){
-           Node temp1 = n1.next;
-           Node temp2 = n2.next;
+      if(l1 == null && l2 == null) return null;
+      if(n1 == null) return n2;
+      if(n2 == null) return n1;
 
-           if( n1.next != null){
-               n1.next =n2;
-           }
+
+      Node temp1 = n1.next;
+       Node temp2 = n2.next;
+       while(temp1 != null && temp2 != null){
+
+
+           n1.next =n2;
            n2.next = temp1;
 
            n1 = temp1;
            n2 = temp2;
-
+           temp1 = temp1.next;
+           temp2 = temp2.next;
        }
+//      if( n2 != null) n1.next = n2;
+//      if( n1 != null) n2.next = temp1;
+      n1.next = n2;
+       if( temp1 != null)n2.next = temp1;
 
-       return result.value;
-//       return l1.head;
+
+      return l1.head;
 
     }
 
