@@ -21,6 +21,8 @@ public class QueueTest {
 
         assertEquals(1, queue.dequeue());//removes 1 from queue
         assertEquals(2, queue.front.value);//2 is now at the front of the queue
+        assertEquals(2, queue.dequeue());
+        assertNull(queue.front);//Nothing left in queue
     }
     @Test public void testPeek(){
         Queue queue = new Queue();

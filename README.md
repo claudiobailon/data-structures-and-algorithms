@@ -6,6 +6,8 @@
 [Challenge 06: Linked-List Part Two](#linked-list-part-two) <br>
 [Challenge 07: Linked-List Part Three](#linked-list-part-three) <br>
 [Challenge 08: Linked-List zipList](#linked-list-zipList) <br>
+[Challenge 10: Stacks and Queues](#stacks-and-queues) <br>
+
 
 
 
@@ -96,8 +98,54 @@ This is adds the zipList method to LinkedList
 
 ### Challenge
 Write a new method that takes in two linkedlists and zips them together.
+### Approach and Efficiency
 Time: O(n)<br>
 Space O(1)
 
 ### Solution
 ![Whiteboard](src/test/resources/08whiteboard.png)
+
+## Stacks and Queues
+This creates and Stack class and Queue class
+
+### Challenge
+Write new classes called Stack, Queue, and Node.  Stack should use Nodes that creates an order that is FILO(first in last out), and queue create an order that is FIFO(first in first out). They both should have methods that add, remove, peek at first value, and check to see if they are empty.
+### Approach and Efficiency
+Stack Methods:<br>
+push():
+- Time: O(1)<br>
+- Space O(1)<br>
+pop():
+- Time: O(1)<br>
+- Space O(1)<br>
+peek():
+- Time: O(1)<br>
+- Space O(1)<br>
+isEmpty():
+- Time: O(1)<br>
+- Space O(1)<br>
+Queue Methods:<br>
+enqueue():
+- Time: O(1)<br>
+- Space O(1)<br>
+dequeue():
+- Time: O(1)<br>
+- Space O(1)<br>
+peek():
+- Time: O(1)<br>
+- Space O(1)<br>
+isEmpty():
+- Time: O(1)<br>
+- Space O(1)<br>
+
+### API
+#### Stack Methods:
+push(): Takes in an integer and adds it to the top of the stack.<br>
+pop(): Removes the top node from the stack and returns it's value.<br>
+peek(): Returns the value of the top node.<br>
+isEmpty(): Checks if stack is empty.  Returns true if it is and false if it is not.<br>
+#### Queue Methods
+enqueue(): Takes in an integer and adds it to the back of the queue.<br>
+dequeue(): Removes the front node from the queue and returns it's value.<br>
+peek(): Returns the value of the front node.<br>
+isEmpty(): Checks if queue is empty. Returns true if it is and false if it's not.<br>

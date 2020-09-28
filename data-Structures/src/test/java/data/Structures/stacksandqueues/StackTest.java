@@ -21,6 +21,8 @@ public class StackTest {
         stack.push(2);
         assertEquals(2, stack.pop());
         assertEquals(1, stack.top.value);
+        assertEquals(1, stack.pop());
+        assertNull(stack.top);
     }
     @Test public void testPeek(){
         Stack stack = new Stack();
