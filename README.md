@@ -7,6 +7,8 @@
 [Challenge 07: Linked-List Part Three](#linked-list-part-three) <br>
 [Challenge 08: Linked-List zipList](#linked-list-zipList) <br>
 [Challenge 10: Stacks and Queues](#stacks-and-queues) <br>
+[Challenge 11: Queue with Stacks](#queue-with-stacks) <br>
+
 
 
 
@@ -27,7 +29,7 @@ Write a function called arrayShift that takes in an array and an int as an argum
 Time: O(n)<br>
 Space O(n)
 ### Solution
-![Whiteboard](src/test/resources/whitboard.png)
+![Whiteboard](challenges/src/test/resources/whitboard.png)
 
 ## Binary Search
 This method will check to see if a value is in any given array.
@@ -37,7 +39,7 @@ Write a function called binarySearch that performs a search to see if a value is
 Time: O(n)<br>
 Space O(n)
 ### Solution
-![Whiteboard](src/test/resources/lab02whiteboard.png)
+![Whiteboard](challenges/src/test/resources/lab02whiteboard.png)
 
 ## Singly Linked List
 This method will create a linked list 
@@ -79,7 +81,7 @@ InsertAfter:
 Time: O(n)<br>
 Space O(1)
 ### Solution
-![Whiteboard](src/test/resources/06whiteboard.png)
+![Whiteboard](challenges/src/test/resources/06whiteboard.png)
 
 ## Linked List Part Three
 This is adds the llKthFromTheEnd method. 
@@ -91,7 +93,7 @@ Time: O(n)<br>
 Space O(1)
 
 ### Solution
-![Whiteboard](src/test/resources/lab07whiteboard.png)
+![Whiteboard](challenges/src/test/resources/lab07whiteboard.png)
 
 ## Linked List zipList
 This is adds the zipList method to LinkedList
@@ -103,7 +105,7 @@ Time: O(n)<br>
 Space O(1)
 
 ### Solution
-![Whiteboard](src/test/resources/08whiteboard.png)
+![Whiteboard](challenges/src/test/resources/08whiteboard.png)
 
 ## Stacks and Queues
 This creates and Stack class and Queue class
@@ -149,3 +151,20 @@ enqueue(): Takes in an integer and adds it to the back of the queue.<br>
 dequeue(): Removes the front node from the queue and returns it's value.<br>
 peek(): Returns the value of the front node.<br>
 isEmpty(): Checks if queue is empty. Returns true if it is and false if it's not.<br>
+
+## Queue with Stacks
+Create a queue class using two stacks
+
+### Challenge
+Create a new queue class called PseudoQueue that uses two stacks to create a queue instead of nodes. Create enqueue and dequeue methods.
+### Approach and Efficiency
+enqueue():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+dequeue():<br>
+- Time: O(n)<br>
+- Space: O(1)<br>
+
+### Solution
+![Whiteboard](challenges/src/test/resources/11whiteboard.png)
