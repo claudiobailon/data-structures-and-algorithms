@@ -8,6 +8,7 @@
 [Challenge 08: Linked-List zipList](#linked-list-zipList) <br>
 [Challenge 10: Stacks and Queues](#stacks-and-queues) <br>
 [Challenge 11: Queue with Stacks](#queue-with-stacks) <br>
+[Challenge 12: Animal Shelter](#animal-shelter) <br>
 
 
 
@@ -84,7 +85,7 @@ Space O(1)
 ![Whiteboard](challenges/src/test/resources/06whiteboard.png)
 
 ## Linked List Part Three
-This is adds the llKthFromTheEnd method. 
+This adds the llKthFromTheEnd method. 
 
 ### Challenge
 Write a new method that takes in k and returns the value of the kth from the end node of a linked list.
@@ -96,7 +97,7 @@ Space O(1)
 ![Whiteboard](challenges/src/test/resources/lab07whiteboard.png)
 
 ## Linked List zipList
-This is adds the zipList method to LinkedList
+This adds the zipList method to LinkedList
 
 ### Challenge
 Write a new method that takes in two linkedlists and zips them together.
@@ -168,3 +169,20 @@ dequeue():<br>
 
 ### Solution
 ![Whiteboard](challenges/src/test/resources/11whiteboard.png)
+
+## Animal Shelter
+This creates an Animal Shelter queue made up of Cats and Dogs. 
+
+### Challenge
+Create a class called AnimalShelter that creates a queue of Dogs and Cats.  An enqueue method should allow you to add an animal to the queue.  The dequeue method should return an animal of the preferred type, either cat or dog.
+### Approach and Efficiency
+enqueue():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+dequeue():<br>
+- Time: O(n)<br>
+- Space: O(1)<br>
+
+### Solution
+![Whiteboard](challenges/src/test/resources/12whiteboard.png)
