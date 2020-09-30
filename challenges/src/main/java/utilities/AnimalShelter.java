@@ -16,9 +16,9 @@ public class AnimalShelter {
         }
     }
     public Animal dequeue(String pref) {
-        if( !pref.equals("dog") && !pref.equals("cat"))return front.animal;
-        if(front == null) return null;
-        if(front.animal.type.equals(pref)){
+        if( !pref.equals("dog") && !pref.equals("cat")) return null;//if pref is not cat or dog, return null
+        if(front == null) return null;//return null if queue is empty
+        if(front.animal.type.equals(pref)){//if the pref matches the animal in front of queue, return that animal
             Node temp = front;
             front = front.next;
             return temp.animal;
@@ -32,6 +32,14 @@ public class AnimalShelter {
             return node.animal;
         }
         return search(node.next, node, pref);
+    }
+    @Override
+    public String toString(){
+        return toString(front);
+    }
+    private String toString(Node node){
+        if(node == null)return "NULL";
+        return String.format("{%s} -> %s", node.animal.toString(), toString(node.next));
     }
 
 }
