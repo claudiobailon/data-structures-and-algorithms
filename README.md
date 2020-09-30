@@ -9,6 +9,8 @@
 [Challenge 10: Stacks and Queues](#stacks-and-queues) <br>
 [Challenge 11: Queue with Stacks](#queue-with-stacks) <br>
 [Challenge 12: Animal Shelter](#animal-shelter) <br>
+[Challenge 13: Multi Bracket Validation](#multi-bracket-validation) <br>
+
 
 
 
@@ -186,3 +188,17 @@ dequeue():<br>
 
 ### Solution
 ![Whiteboard](challenges/src/test/resources/12whiteboard.png)
+
+## Multi Bracket Validation
+This creates a method to check if a string contains balanced brackets. 
+
+### Challenge
+Create a method called multiBracketValidation that takes in a string and checks to see if the brackets inside of it are balanced. This includes round, square, and curly brackets and can contain chars other than brackets.  
+
+### Approach and Efficiency
+multiBracketValidation():<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges/src/test/resources/13whitboard.png)
