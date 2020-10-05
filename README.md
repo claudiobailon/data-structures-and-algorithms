@@ -11,6 +11,8 @@
 [Challenge 12: Animal Shelter](#animal-shelter) <br>
 [Challenge 13: Multi Bracket Validation](#multi-bracket-validation) <br>
 [Challenge 15: Trees](#trees) <br>
+[Challenge 16: Find Maximum Value](#find-maximum-value) <br>
+
 
 
 
@@ -255,4 +257,18 @@ add(): Takes in an Integer and adds it to the tree where it's value is higher th
 but lower than those to it's right.<br>    
 
 contains(): Takes in an Integer and returns truee if that value is contained in the tree and 
-false if it is not.          
+false if it is not.         
+
+## Find Maximum Value
+This method finds the maximum value of a tree.
+
+### Challenge
+Create a method called findMaxValue that walks through a tree and returns the value that is the greatest. 
+
+### Approach and Efficiency
+multiBracketValidation():<br>
+- Time: O(n)<br>
+- Space: O(1)<br>
+
+### Solution
+![Whiteboard](challenges/src/test/resources/16whiteboard.png) 
