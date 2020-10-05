@@ -10,7 +10,7 @@ public class Node {
     }
 
     public String toString(){
-        return String.format("{%d}", value);
+        return String.format("%d", value);
     }
 
     public int getValue(){
