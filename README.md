@@ -10,6 +10,7 @@
 [Challenge 11: Queue with Stacks](#queue-with-stacks) <br>
 [Challenge 12: Animal Shelter](#animal-shelter) <br>
 [Challenge 13: Multi Bracket Validation](#multi-bracket-validation) <br>
+[Challenge 15: Trees](#trees) <br>
 
 
 
@@ -202,3 +203,56 @@ multiBracketValidation():<br>
 
 ### Solution
 ![Whiteboard](challenges/src/test/resources/13whitboard.png)
+
+## Trees
+This creates a tree data structure.
+
+### Challenge
+Create a node class that holds a value and points left and right. Create binaryTree and binarySearchTree classes, 
+where the binaryTree class holds methods for retrieving values from the tree in preOrder, inOrder, and postOrder. 
+The binarySearchTree should be able to add a value in a way that the tree is organized such that the value to the left
+is less than the value to the right through every part of the tree. It should also have a method that searches the tree 
+to see if a value is contained in the tree.  
+### Approach and Efficiency
+BinaryTree:<br>
+preOrder():<br>
+- Time: O(n)<br>
+- Space: O(h)(h is height of tree)<br>
+
+inOrder():<br>
+- Time: O(n)<br>
+- Space: O(h)<br>
+
+preOrder():<br>
+- Time: O(n)<br>
+- Space: O(h)(<br>
+
+BinarySearchTree:<br>
+add():<br>
+- Time: O(h)<br>
+- Space: O(h)(<br>
+
+contains():<br>
+- Time: O(h)<br>
+- Space: O(h)(<br>
+
+### API
+#### BinaryTree methods
+preOrder(): Takes in a Node and an empty Integer ArrayList
+and returns an Interger ArrayLists with all values in the tree added
+as they are encountered.<br>
+
+inOrder(): Takes in a Node and an empty Integer ArrayList
+and returns an Interger ArrayLists with all values in the tree added
+when they do not have a left or if their left node as already been added.
+
+postOrder(): Takes in a Node and an empty Integer ArrayList
+and returns an Interger ArrayLists with all values in the tree added
+when they do not have a left or a right or if their left and right nodes have already been added.
+
+#### BinarySearchTree methods
+add(): Takes in an Integer and adds it to the tree where it's value is higher than those to it's left
+but lower than those to it's right.<br>    
+
+contains(): Takes in an Integer and returns truee if that value is contained in the tree and 
+false if it is not.          
