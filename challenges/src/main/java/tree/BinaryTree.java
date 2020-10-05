@@ -9,6 +9,7 @@ public class BinaryTree extends Tree{
     public BinaryTree(){
         super();
     }
+    int maxValue;
 
     public ArrayList<Integer> preOrder(Node current, ArrayList<Integer> output){
         output.add(current.getValue());
@@ -31,6 +32,12 @@ public class BinaryTree extends Tree{
         return output;
     }
 
+    public int findMaxValue(Node current){
 
+        if(current.value > maxValue) maxValue = current.value;
+        if(current.left!= null) findMaxValue(current.left);
+        if(current.right != null) findMaxValue(current.right);
+        return maxValue;
+    }
 
 }
