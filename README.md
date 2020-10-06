@@ -12,6 +12,7 @@
 [Challenge 13: Multi Bracket Validation](#multi-bracket-validation) <br>
 [Challenge 15: Trees](#trees) <br>
 [Challenge 16: Find Maximum Value](#find-maximum-value) <br>
+[Challenge 17: Breadth First](#breadth-first) <br>
 
 
 
@@ -272,3 +273,18 @@ multiBracketValidation():<br>
 
 ### Solution
 ![Whiteboard](challenges/src/test/resources/16whiteboard.png) 
+
+## Breadth First
+This method traverses a tree in breadth first order.
+
+### Challenge
+Create a breadth first traversal method that takes in a binary tree and returns a list of the values in
+the tree in leveled order.
+
+### Approach and Efficiency
+breadthFirst():<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges/src/test/resources/17whiteboard.png) 

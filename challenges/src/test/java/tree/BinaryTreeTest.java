@@ -82,8 +82,16 @@ public class BinaryTreeTest {
         BinaryTree tree2 = new BinaryTree(root2);
 
         assertEquals(7,tree.findMaxValue(root));//works on balanced tree
-        assertEquals(11,tree2.findMaxValue(root2));//works on unbalanced tree
+        assertEquals(11,tree2.findMaxValue(root2));//works on balanced tree
+    }
+    @Test public void testBreadthFirst() throws InterruptedException {
+        Node root = createTree();
+        Node root2= createTree2();
+        BinaryTree tree = new BinaryTree(root);
+        BinaryTree tree2 = new BinaryTree(root2);
 
+        assertEquals("[4, 2, 6, 1, 3, 5, 7]", tree.breadthFirst(tree).toString());//works on balanced tree
+        assertEquals("[4, 2, 6, 1, 3, 5, 7, 9, 8, 11, 10]", tree2.breadthFirst(tree2).toString());//works on an unbalanced tree
     }
 
 }

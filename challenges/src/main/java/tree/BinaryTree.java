@@ -1,6 +1,10 @@
 package tree;
 
+import sun.misc.Queue;
+
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 public class BinaryTree extends Tree{
     public BinaryTree(Node root){
@@ -38,6 +42,21 @@ public class BinaryTree extends Tree{
         if(current.left!= null) findMaxValue(current.left);
         if(current.right != null) findMaxValue(current.right);
         return maxValue;
+    }
+
+    public ArrayList<Integer> breadthFirst(BinaryTree tree) throws InterruptedException {
+        ArrayList<Integer> output = new ArrayList<Integer>();
+        Queue<Node> queue = new Queue<Node>();
+        Node root = tree.root;
+        queue.enqueue(root);
+        while(!queue.isEmpty()){
+            Node node = (Node) queue.dequeue(); //casts the value being dequeued as a Node and assigns it to a Node called node
+            output.add(node.getValue());//adds node value that was just dequeued to output ArrayList
+            if(node.left != null) queue.enqueue(node.left);
+            if(node.right != null) queue.enqueue(node.right);
+
+        }
+        return output;
     }
 
 }
