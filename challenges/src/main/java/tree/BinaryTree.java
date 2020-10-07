@@ -54,7 +54,6 @@ public class BinaryTree extends Tree{
             output.add(node.getValue());//adds node value that was just dequeued to output ArrayList
             if(node.left != null) queue.enqueue(node.left);
             if(node.right != null) queue.enqueue(node.right);
-
         }
         return output;
     }
