@@ -16,16 +16,27 @@ public class KaryTree<T> {
     public void setRoot(KNode<T> root){this.root = root;}
 
     static class KNode<T>{
-        T value;
-        List<KNode<T>> children = new ArrayList<>();
+        private T value;
+        private ArrayList<KNode<T>> children = new ArrayList<>();
 
         public KNode(T value){this.value = value;}
 
-        public boolean addChild(KNode<T> child) { return this.children.add(child); }
+        public void addChild(KNode<T> child) { children.add(child); }
 
         public T getValue() { return value; }
+        public void setValue(T value){this.value = value;}
 
-        public List<KNode<T>> getChildren() { return children; }
+        public ArrayList<KNode<T>> getChildren() { return children; }
+
+    }
+    public String toString(){return toString(this.root);}
+    public String toString(KaryTree.KNode current){
+        String output = current.getValue().toString();
+        for(KaryTree.KNode next : (ArrayList<KaryTree.KNode>) current.getChildren()){
+            output += " -> " + toString(next);
+        }
+        return output;
+
     }
 
 }

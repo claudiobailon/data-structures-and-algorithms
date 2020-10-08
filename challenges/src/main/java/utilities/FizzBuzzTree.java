@@ -2,7 +2,11 @@ package utilities;
 
 import org.checkerframework.checker.units.qual.K;
 
+import java.util.ArrayList;
+
 public class FizzBuzzTree {
+    private KaryTree.KNode root;
+
     public static KaryTree<String> fizzBuzzTree(KaryTree<Integer> input){
         KaryTree<String> output = new KaryTree<String>();
         output.setRoot(fizzBuzz(input.getRoot()));
@@ -22,4 +26,6 @@ public class FizzBuzzTree {
         if (value % 5 == 0) return "Buzz";
         return Integer.toString(value);
     }
+
+
 }
