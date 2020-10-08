@@ -13,6 +13,8 @@
 [Challenge 15: Trees](#trees) <br>
 [Challenge 16: Find Maximum Value](#find-maximum-value) <br>
 [Challenge 17: Breadth First](#breadth-first) <br>
+[Challenge 18: FizzBuzz](#fizzBuzz) <br>
+
 
 
 
@@ -288,3 +290,21 @@ breadthFirst():<br>
 
 ### Solution
 ![Whiteboard](challenges/src/test/resources/17whiteboard.png) 
+
+## FizzBuzz
+This method takes in a tree, traverses it, and returns a new tree with modified values.
+
+### Challenge
+Create a method that takes in a tree and returns a new tree where the values are modified such that:<br>
+- If the value is divisible by 3, replace the value with “Fizz”<br>
+- If the value is divisible by 5, replace the value with “Buzz”<br>
+- If the value is divisible by 3 and 5, replace the value with “FizzBuzz”<br>
+- Otherwise, turn the value into a String.
+
+### Approach and Efficiency
+fizzBuzz():<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges/src/test/resources/18whiteboard.png) 
