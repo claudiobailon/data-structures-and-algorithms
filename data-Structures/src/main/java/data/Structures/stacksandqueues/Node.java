@@ -2,7 +2,7 @@ package data.Structures.stacksandqueues;
 
 public class Node {
     int value;
-    Node next;
+    Node next = null;
 
     public Node(int value) {
         this.value = value;

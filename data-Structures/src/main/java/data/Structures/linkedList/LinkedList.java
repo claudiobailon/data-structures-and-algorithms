@@ -56,8 +56,8 @@ public class LinkedList {
 
     public class Node {
         public int value;
-        public Node next;
-        public Node prev;
+        public Node next = null;
+        public Node prev = null;
 
 
         public  Node(int value){
