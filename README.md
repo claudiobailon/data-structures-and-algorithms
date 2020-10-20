@@ -14,6 +14,8 @@
 [Challenge 16: Find Maximum Value](#find-maximum-value) <br>
 [Challenge 17: Breadth First](#breadth-first) <br>
 [Challenge 18: FizzBuzz](#fizzBuzz) <br>
+[Challenge 26: Insertion Sort](#insertion-sort) <br>
+
 
 
 
@@ -248,11 +250,11 @@ and returns an Interger ArrayLists with all values in the tree added
 as they are encountered.<br>
 
 inOrder(): Takes in a Node and an empty Integer ArrayList
-and returns an Interger ArrayLists with all values in the tree added
+and returns an Integer ArrayLists with all values in the tree added
 when they do not have a left or if their left node as already been added.
 
 postOrder(): Takes in a Node and an empty Integer ArrayList
-and returns an Interger ArrayLists with all values in the tree added
+and returns an Integer ArrayLists with all values in the tree added
 when they do not have a left or a right or if their left and right nodes have already been added.
 
 #### BinarySearchTree methods
@@ -308,3 +310,17 @@ fizzBuzz():<br>
 
 ### Solution
 ![Whiteboard](challenges/src/test/resources/18whiteboard.png) 
+
+## Insertion Sort
+This method sorts an array by value from lowest to highest. 
+
+### Challenge
+Create a method that takes in an int array and returns an array that is sorted by value from lowest to highest.
+
+### Approach and Efficiency
+insertSort():<br>
+- Time: O(n^2)<br>
+- Space: O(1)<br>
+
+### Solution
+[Blog](BLOG.md)
