@@ -315,7 +315,7 @@ fizzBuzz():<br>
 This method sorts an array by value from lowest to highest. 
 
 ### Challenge
-Create a method that takes in an int arrayList and returns an arrayList that is sorted by value from lowest to highest.
+Create a method that takes in an int array and returns an array that is sorted by value from lowest to highest.
 
 ### Approach and Efficiency
 insertSort():<br>
