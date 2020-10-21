@@ -1,9 +1,13 @@
+# Blog Table of Contents
+[Selection Sort](#selection-sort)<br>
+[Merge Sort](#merge-sort)<br>
+
 ## Selection Sort
 Here I will walk through a selection sort on a test array, showing how the array
 changes on each pass.
 ### Psuedocode
 Here is the code we will be running through to sort the given array.<br>
-for( int i = 1; i<arr.length; i++){<br>
+```for( int i = 1; i<arr.length; i++){<br>
 int j = i-1;<br>
 int temp = arr[ i ];<br>
 while ( j >= 0 && temp < arr[ j ]){<br>
@@ -15,6 +19,7 @@ while ( j >= 0 && temp < arr[ j ]){<br>
 
 arr[ j+1] = temp;<br>
 }
+ ``` 
 ### Trace
 We will trace through the given array of [8,4,23,42,16,15] and sort it. 
 #### Pass 1
@@ -52,3 +57,51 @@ we compare 15 to the value at index 3, 23. 15 is less than 23, so we continue th
 23 and we compare 15 to the value at index 2, 16. 15 is less than 16, so we continue the loop and set the value of the array at index 
 3 to 16 and compare 15 to the value at index 1, 8. 15 is greater than 8, so we break out of the while loop and assign the value of our
 current index, 2, to 15.  That is the end of the array and it is now sorted to [4,8,15,16,23,42].
+
+## Merge Sort
+We will walk through a merge sort on a test array, tracing each step of the merge.
+### Psuedocode
+```ALGORITHM Mergesort(arr)
+   DECLARE n <-- arr.length
+          
+   if n > 1
+     DECLARE mid <-- n/2
+     DECLARE left <-- arr[0...mid]
+     DECLARE right <-- arr[mid...n]
+     // sort the left side
+     Mergesort(left)
+     // sort the right side
+     Mergesort(right)
+     // merge the sorted left and right sides together
+     Merge(left, right, arr)
+
+ALGORITHM Merge(left, right, arr)
+   DECLARE i <-- 0
+   DECLARE j <-- 0
+   DECLARE k <-- 0
+
+   while i < left.length && j < right.length
+       if left[i] <= right[j]
+           arr[k] <-- left[i]
+           i <-- i + 1
+       else
+           arr[k] <-- right[j]
+           j <-- j + 1
+           
+       k <-- k + 1
+
+   if i = left.length
+      set remaining entries in arr to remaining values in right
+   else
+      set remaining entries in arr to remaining values in left
+```
+## Trace
+We will trace through the given array of [8,4,23,42,16,15] and sort it. 
+
+![Whiteboard](challenges/src/test/resources/blog2.png) <br>
+
+### Pass 1
+### Pass 2
+### Pass 3
+### Pass 4
+### Pass 5
