@@ -96,12 +96,38 @@ ALGORITHM Merge(left, right, arr)
       set remaining entries in arr to remaining values in left
 ```
 ## Trace
-We will trace through the given array of [8,4,23,42,16,15] and sort it. 
+We will trace through the given array of [8,4,23,42,16,15] being merge sorted. 
+
+We begin by checking if the array is bigger than 1, and if it is, we divide it into two arrays, left and right.
+We then do this to left array recursively. This will take us down each left array until the last left is array of 
+only one index, then we go the the right array and begin the process again.  Finally, we merge the sorted arrays. 
+Here is a visual going through an array. 
 
 ![Whiteboard](challenges/src/test/resources/blog2.png) <br>
+ 
+As you can see, we break up [8,4,23,42,16,15] into a left array, [8,4,23], and right array, [42,16,15].  We then run
+mergeSort on the left array, which breaks in to a new left array, [8,4], and new right array, [23]. 
+ 
+The new left array is still larger than one, so we run mergeSort on it yet again. This creates another left array, [8], 
+and right array [4]. 
 
-### Pass 1
-### Pass 2
-### Pass 3
-### Pass 4
-### Pass 5
+Since the left array is now down to a single index, we go back up and run mergeSort on the last right array, [8]. It is 
+also down to a single index, so we merge them, which also sorts them, into a new, sorted, left array, [4,8]. 
+
+We then get kicked back up to the last right array of [23].  This has only one index, so we merge it with the sorted left 
+array, [4,8], which creates yet another sorted left array of [4,8,23].  
+
+This kicks us all the way back up to the original right array, [42,15,15]. For reference, this is labeled as 10 in the 
+visual.  We now run mergeSort on the right array, which creates a left array of [42,16] and right array of [15].  
+
+This new left array has more than one index, so we run mergeSort on it. This creates a left array of [42] and right array 
+of [16].  
+
+The resulting left array has just one index, so we run merge sort on the right array, which also only has one index. We 
+merge them, creating a new left array of [16,42].  
+
+We move back up to the last right array of [15]. It has only one index, so we merge it with the left array, creating a new 
+right array of [15,16,42].  
+
+We are finally down to one left array, [4,8,23], and one right array, [15,16,42], which are both sorted.  We merge them, 
+creating the final output array of [4,8,15,16,23,42], which is fully sorted!
