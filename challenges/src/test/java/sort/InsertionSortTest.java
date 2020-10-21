@@ -1,4 +1,4 @@
-package insertionSort;
+package sort;
 
 import org.junit.Test;
 

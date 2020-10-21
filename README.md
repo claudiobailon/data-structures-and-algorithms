@@ -15,6 +15,7 @@
 [Challenge 17: Breadth First](#breadth-first) <br>
 [Challenge 18: FizzBuzz](#fizzBuzz) <br>
 [Challenge 26: Insertion Sort](#insertion-sort) <br>
+[Challenge 27: Merge Sort](#merge-sort) <br>
 
 
 
@@ -321,6 +322,22 @@ Create a method that takes in an int array and returns an array that is sorted b
 insertSort():<br>
 - Time: O(n^2)<br>
 - Space: O(1)<br>
+
+### Solution
+[Blog](BLOG.md)
+
+## Merge Sort
+This method sorts an array by value from lowest to highest. 
+
+### Challenge
+Create a method that takes in an int array and returns an array that is sorted by value from lowest to highest. It should
+do this by dividing the array in half recursively until you can no longer divide it, then performing a sort that merges
+each set of two arrays while sorting them. 
+
+### Approach and Efficiency
+insertSort():<br>
+- Time: O(log n)<br>
+- Space: O(n)<br>
 
 ### Solution
 [Blog](BLOG.md)
