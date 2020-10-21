@@ -40,14 +40,14 @@ public class MergeSort {
         if(i == left.length) {
             for(int l = j; l < right.length; l++) {
                 arr[k] = right[l];
+                k++;
             }
         } else {
             for(int m = i; m < left.length; m++) {
                 arr[k] = left[m];
+                k++;
             }
         }
-
-
 
         return arr;
     }
