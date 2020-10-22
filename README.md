@@ -43,7 +43,7 @@ Write a function called arrayShift that takes in an array and an int as an argum
 Time: O(n)<br>
 Space O(n)
 ### Solution
-![Whiteboard](challenges/src/test/resources/whitboard.png)
+![Whiteboard](challenges401/src/test/resources/whitboard.png)
 
 ## Binary Search
 This method will check to see if a value is in any given array.
@@ -53,7 +53,7 @@ Write a function called binarySearch that performs a search to see if a value is
 Time: O(n)<br>
 Space O(n)
 ### Solution
-![Whiteboard](challenges/src/test/resources/lab02whiteboard.png)
+![Whiteboard](challenges401/src/test/resources/lab02whiteboard.png)
 
 ## Singly Linked List
 This method will create a linked list 
@@ -95,7 +95,7 @@ InsertAfter:
 Time: O(n)<br>
 Space O(1)
 ### Solution
-![Whiteboard](challenges/src/test/resources/06whiteboard.png)
+![Whiteboard](challenges401/src/test/resources/06whiteboard.png)
 
 ## Linked List Part Three
 This adds the llKthFromTheEnd method. 
@@ -107,7 +107,7 @@ Time: O(n)<br>
 Space O(1)
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/lab07whiteboard.png)
+![Whiteboard](challenges401/src/test/resources/lab07whiteboard.png)
 
 ## Linked List zipList
 This adds the zipList method to LinkedList
@@ -119,7 +119,7 @@ Time: O(n)<br>
 Space O(1)
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/08whiteboard.png)
+![Whiteboard](challenges401/src/test/resources/08whiteboard.png)
 
 ## Stacks and Queues
 This creates and Stack class and Queue class
@@ -181,7 +181,7 @@ dequeue():<br>
 - Space: O(1)<br>
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/11whiteboard.png)
+![Whiteboard](challenges401/src/test/resources/11whiteboard.png)
 
 ## Animal Shelter
 This creates an Animal Shelter queue made up of Cats and Dogs. 
@@ -198,7 +198,7 @@ dequeue():<br>
 - Space: O(1)<br>
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/12whiteboard.png)
+![Whiteboard](challenges401/src/test/resources/12whiteboard.png)
 
 ## Multi Bracket Validation
 This creates a method to check if a string contains balanced brackets. 
@@ -212,7 +212,7 @@ multiBracketValidation():<br>
 - Space: O(n)<br>
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/13whitboard.png)
+![Whiteboard](challenges401/src/test/resources/13whitboard.png)
 
 ## Trees
 This creates a tree data structure.
@@ -279,7 +279,7 @@ multiBracketValidation():<br>
 - Space: O(1)<br>
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/16whiteboard.png) 
+![Whiteboard](challenges401/src/test/resources/16whiteboard.png) 
 
 ## Breadth First
 This method traverses a tree in breadth first order.
@@ -294,7 +294,7 @@ breadthFirst():<br>
 - Space: O(n)<br>
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/17whiteboard.png) 
+![Whiteboard](challenges401/src/test/resources/17whiteboard.png) 
 
 ## FizzBuzz
 This method takes in a tree, traverses it, and returns a new tree with modified values.
@@ -312,7 +312,7 @@ fizzBuzz():<br>
 - Space: O(n)<br>
 
 ### Solution
-![Whiteboard](challenges/src/test/resources/18whiteboard.png) 
+![Whiteboard](challenges401/src/test/resources/18whiteboard.png) 
 
 ## Insertion Sort
 This method sorts an array by value from lowest to highest. 
