@@ -1,6 +1,7 @@
 # Blog Table of Contents
 [Selection Sort](#selection-sort)<br>
 [Merge Sort](#merge-sort)<br>
+[Quick Sort](#quick-sort)<br>
 
 ## Selection Sort
 Here I will walk through a selection sort on a test array, showing how the array
@@ -131,3 +132,105 @@ right array of [15,16,42].
 
 We are finally down to one left array, [4,8,23], and one right array, [15,16,42], which are both sorted.  We merge them, 
 creating the final output array of [4,8,15,16,23,42], which is fully sorted!
+
+## Quick Sort
+We will walk through a quick sort on a test array.
+### Psuedocode
+```
+ALGORITHM QuickSort(arr, left, right)
+    if left < right
+        // Partition the array by setting the position of the pivot value 
+        DEFINE position <-- Partition(arr, left, right)
+        // Sort the left
+        QuickSort(arr, left, position - 1)
+        // Sort the right
+        QuickSort(arr, position + 1, right)
+
+ALGORITHM Partition(arr, left, right)
+    // set a pivot value as a point of reference
+    DEFINE pivot <-- arr[right]
+    // create a variable to track the largest index of numbers lower than the defined pivot
+    DEFINE low <-- left - 1
+    for i <- left to right do
+        if arr[i] <= pivot
+            low++
+            Swap(arr, i, low)
+
+     // place the value of the pivot location in the middle.
+     // all numbers smaller than the pivot are on the left, larger on the right. 
+     Swap(arr, right, low + 1)
+    // return the pivot index point
+     return low + 1
+
+ALGORITHM Swap(arr, i, low)
+    DEFINE temp;
+    temp <-- arr[i]
+    arr[i] <-- arr[low]
+    arr[low] <-- temp
+```
+## Trace
+The array we will be tracing through is [8,4,23,42,16,15]. We start by assigning a pivot to the last 
+index of the array. We then compare the value of that pivot, 15,  to the rest of the array using a for loop. 
+The goal here is to move the pivot to an index where the indexes to it's left are all less than the pivot, 
+and the indexes to the right all have a value greater than the pivot.  
+### Pass 1 with First Pivot
+
+
+![Whiteboard](challenges/src/test/resources/blog3a.png) <br>
+
+
+The pivot is compared to the 8 that is currently at the first index.  It is less than the 15, so low is 
+incremented and is now 0.  We then switch the value at the i index, 0, and value at the low index, 0. Since 
+they are the same, the 8 just swaps with itself. Our new array is the same as the last, [8, 4, 23, 42, 16, 15]
+
+## Pass 2 with First Pivot
+![Whiteboard](challenges/src/test/resources/blog3b.png) <br>
+
+Now, the pivot is compared to the 4 at the second index. It is less than the 15, so low is 
+incremented and is now 1.  We then switch the value at the i index, 1, and value at the low index, 1. They 
+are again the same, so the 4 just swaps with itself. The array is unchanged, [8, 4, 23, 42, 16, 15]
+
+## Pass 3 and 4 with First Pivot
+
+![Whiteboard](challenges/src/test/resources/blog3c.png) <br>
+
+Pivot is now compared to the 23 at the third index. It is greater than 15, so we don't do anything with it and
+move on to comparing pivot to 42 at the fourth index.  42 is also greater than 15, so we move on. 
+
+## Pass 5 with First Pivot
+
+![Whiteboard](challenges/src/test/resources/blog3d.png) <br>
+
+We now compare the pivot to the 16 at the fifth index.  It is greater than 15, so we don't do anything. This 
+ends our for loop. Now, we swap the value of the right index with the value at the low + 1 index.  The right 
+index is 5 and the low + 1 index is 2, so 23 and 15 swap places, leaving us with a new array of [8, 4, 15, 42, 16, 23].
+  
+## Pass 1 with Second Pivot  
+
+![Whiteboard](challenges/src/test/resources/blog3e.png) <br>
+
+Our new pivot is set to 4 at second index. This happens because the previous pivot landed at the correct spot in the array, 
+at the third index, and we now want to run  quickSort on the left half of the array. The farthest right on the left half 
+of the array is the second index. So, we enter into a new for loop to compare the new pivot of 4 with the rest of the array. 4 is compared to the 8 at the 
+first index.  It is greater than 4, so we don't do anything, and that ends our for loop.  We again swap the value of the 
+right index with the value at the low + 1 index.  The right index is now 1 and the low + 1 index is 0, so the 4 and 8 
+swap places, leaving us with a new array of [4, 8, 15, 42, 16, 23].   
+
+## Pass 1 and 2 with Third Pivot
+
+![Whiteboard](challenges/src/test/resources/blog3f.png) <br>
+
+We now wan to run quickSort on the right half of the array.  This sets the new pivot to the value at last index, which is 
+currently 23. We compare this to the first index of the right side of the array, which is the fourth index with a value of 
+42. 42 is larger than 23, so we don't do anything.  Next, we compare 23 with the value at the fifth index, 16.  16 is smaller 
+than 23, so we increment low and, which is now 3.  We then switch the value at the i index, 4, and value at the low index, 3, 
+so 42 and 16 swap places. The resulting array is [4, 8, 15, 16, 42, 23].
+
+## Final Swap
+
+![Whiteboard](challenges/src/test/resources/blog3g.png) <br>
+
+We are left with one last swap. We swap the value of the right index with the value at the low + 1 index.  
+The right index is now 5 and the low + 1 index is 4, so the 42 and 23 swap places, leaving us with a final 
+array of [4, 8, 15, 16, 23, 42].   The quickSort is complete and the array is sorted!
+

@@ -16,6 +16,8 @@
 [Challenge 18: FizzBuzz](#fizzBuzz) <br>
 [Challenge 26: Insertion Sort](#insertion-sort) <br>
 [Challenge 27: Merge Sort](#merge-sort) <br>
+[Challenge 28: Quick Sort](#merge-sort) <br>
+
 
 
 
@@ -334,6 +336,21 @@ Create a method that takes in an int array and returns an array that is sorted b
 do this by dividing the array in half recursively until you can no longer divide it, then performing a sort that merges
 each set of two arrays while sorting them. 
 
+### Approach and Efficiency
+insertSort():<br>
+- Time: n(log n)<br>
+- Space: O(n)<br>
+
+### Solution
+[Blog](BLOG.md)
+
+## Quick Sort
+This method sorts an array by value from lowest to highest. 
+
+### Challenge
+Create a method that takes in an int array and returns an array that is sorted by value from lowest to highest. It should
+do this by creating a pivot and putting it in it's correct position and putting all smaller elements before it and all 
+greeater elements behind it.  
 ### Approach and Efficiency
 insertSort():<br>
 - Time: O(log n)<br>
