@@ -24,7 +24,7 @@ arr[ j+1] = temp;<br>
 ### Trace
 We will trace through the given array of [8,4,23,42,16,15] and sort it. 
 #### Pass 1
-![Whiteboard](challenges/src/test/resources/blog1a.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog1a.png) <br>
 Our first pass through of the selection sort starts with i equal to 1 and then sets j to i-1, which is 0.
 We then set an int variable called temp to the array at index 1, which is 4. Now that temp is set to the 
 value of the second index, we compare it to the value at the first index.  Since it is less than that value (8),
@@ -33,17 +33,17 @@ index 1 is now 8. J is decremented down to -1, which breaks us out of the while 
 the value at the index of j + 1 ( which is now the index of 0) to the value from the temp variable, which is 4. The 
 array now has the value of 4 at arr[0] and 8 at arr[1], and we move to the next pass.  
 #### Pass 2
-![Whiteboard](challenges/src/test/resources/blog1b.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog1b.png) <br>
 On this second pass, i is now 2, which means j is set to 1 and the temp variable is assigned the value from the third index, 
 which is 23.  We now compare 23 to the value at the previous index to see if it is smaller. It is not, so we go to the 
 last line of code which sets value at the index 2 to the temp variable, which is 23, so there is no change.
 #### Pass 3
-![Whiteboard](challenges/src/test/resources/blog1c.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog1c.png) <br>
 The third pass is much like the second.  Since i is now 3, j is set to 2 and the temp variable is now 42.  Since 42 is
 larger than the value that is before it, 23, we don't ente the while loop and the current index is set to the temp value,
 which is the same value, 42. The array doesn't change and we move on. 
 #### Pass 4
-![Whiteboard](challenges/src/test/resources/blog1d.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog1d.png) <br>
 This pass requires a couple traversals of our while loop.  I is now 4, so j is set to 3 the temp variable is now 16. 16 is 
 less than the value of the index before it, 42, so we enter the while loop.  There, the value at our current index is set to the 
 value of the previous index, 42, then we decrement so that we can see if our temp variable is less than the value of the index 
@@ -51,7 +51,7 @@ before the index we just compared, 23. 16 is less than 23, so we contiue the whi
 set to 23, and we decrement to compare it to value at the next index, 8.  16 is greater than 8, so we break the loop and assign 
 our current index to the temp value of 16.  So, 43 and 23 both move up an index while 16 moves down 2 indexes. 
 #### Pass 5
-![Whiteboard](challenges/src/test/resources/blog1e.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog1e.png) <br>
 Like pass 4, we will enter our while loop multiple times.  With i now at 5, j is set to 4 and the temp variable is now 15. 15
 is less than the value of the index before it, 42, so we enter the while loop.  The value of the array at index 5 is set to 42, then 
 we compare 15 to the value at index 3, 23. 15 is less than 23, so we continue the loop.  The value of the array at index 4 is set to
@@ -104,7 +104,7 @@ We then do this to left array recursively. This will take us down each left arra
 only one index, then we go the the right array and begin the process again.  Finally, we merge the sorted arrays. 
 Here is a visual going through an array. 
 
-![Whiteboard](challenges/src/test/resources/blog2.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog2.png) <br>
  
 As you can see, we break up [8,4,23,42,16,15] into a left array, [8,4,23], and right array, [42,16,15].  We then run
 mergeSort on the left array, which breaks in to a new left array, [8,4], and new right array, [23]. 
@@ -176,7 +176,7 @@ and the indexes to the right all have a value greater than the pivot.
 ### Pass 1 with First Pivot
 
 
-![Whiteboard](challenges/src/test/resources/blog3a.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog3a.png) <br>
 
 
 The pivot is compared to the 8 that is currently at the first index.  It is less than the 15, so low is 
@@ -184,7 +184,7 @@ incremented and is now 0.  We then switch the value at the i index, 0, and value
 they are the same, the 8 just swaps with itself. Our new array is the same as the last, [8, 4, 23, 42, 16, 15]
 
 ## Pass 2 with First Pivot
-![Whiteboard](challenges/src/test/resources/blog3b.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog3b.png) <br>
 
 Now, the pivot is compared to the 4 at the second index. It is less than the 15, so low is 
 incremented and is now 1.  We then switch the value at the i index, 1, and value at the low index, 1. They 
@@ -192,14 +192,14 @@ are again the same, so the 4 just swaps with itself. The array is unchanged, [8,
 
 ## Pass 3 and 4 with First Pivot
 
-![Whiteboard](challenges/src/test/resources/blog3c.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog3c.png) <br>
 
 Pivot is now compared to the 23 at the third index. It is greater than 15, so we don't do anything with it and
 move on to comparing pivot to 42 at the fourth index.  42 is also greater than 15, so we move on. 
 
 ## Pass 5 with First Pivot
 
-![Whiteboard](challenges/src/test/resources/blog3d.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog3d.png) <br>
 
 We now compare the pivot to the 16 at the fifth index.  It is greater than 15, so we don't do anything. This 
 ends our for loop. Now, we swap the value of the right index with the value at the low + 1 index.  The right 
@@ -207,7 +207,7 @@ index is 5 and the low + 1 index is 2, so 23 and 15 swap places, leaving us with
   
 ## Pass 1 with Second Pivot  
 
-![Whiteboard](challenges/src/test/resources/blog3e.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog3e.png) <br>
 
 Our new pivot is set to 4 at second index. This happens because the previous pivot landed at the correct spot in the array, 
 at the third index, and we now want to run  quickSort on the left half of the array. The farthest right on the left half 
@@ -218,7 +218,7 @@ swap places, leaving us with a new array of [4, 8, 15, 42, 16, 23].
 
 ## Pass 1 and 2 with Third Pivot
 
-![Whiteboard](challenges/src/test/resources/blog3f.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog3f.png) <br>
 
 We now wan to run quickSort on the right half of the array.  This sets the new pivot to the value at last index, which is 
 currently 23. We compare this to the first index of the right side of the array, which is the fourth index with a value of 
@@ -228,7 +228,7 @@ so 42 and 16 swap places. The resulting array is [4, 8, 15, 16, 42, 23].
 
 ## Final Swap
 
-![Whiteboard](challenges/src/test/resources/blog3g.png) <br>
+![Whiteboard](challenges401/src/test/resources/blog3g.png) <br>
 
 We are left with one last swap. We swap the value of the right index with the value at the low + 1 index.  
 The right index is now 5 and the low + 1 index is 4, so the 42 and 23 swap places, leaving us with a final 
