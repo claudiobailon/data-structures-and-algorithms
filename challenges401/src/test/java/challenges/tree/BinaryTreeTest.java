@@ -91,7 +91,7 @@ public class BinaryTreeTest {
         BinaryTree tree2 = new BinaryTree(root2);
 
         assertEquals("[4, 2, 6, 1, 3, 5, 7]", tree.breadthFirst(tree).toString());//works on balanced tree
-        assertEquals("[4, 2, 6, 1, 3, 5, 7, 9, 8, 11, 10]", tree2.breadthFirst(tree2).toString());//works on an unbalanced tree
+        assertEquals("[4, 2, 6, 1, 3, 5, 7, 9, 8, 11, 10]", tree2.breadthFirst(tree2).toString());//works on an unbalanced tre
     }
-
+    //I opened up all tests and ran them and they all run and all pass. 
 }
