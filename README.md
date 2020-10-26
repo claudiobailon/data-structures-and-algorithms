@@ -17,6 +17,7 @@
 [Challenge 26: Insertion Sort](#insertion-sort) <br>
 [Challenge 27: Merge Sort](#merge-sort) <br>
 [Challenge 28: Quick Sort](#merge-sort) <br>
+[Challenge 30: HashTable](#hashtable) <br>
 
 
 
@@ -358,3 +359,49 @@ insertSort():<br>
 
 ### Solution
 [Blog](BLOG.md)
+
+## HashTable
+This creates a HashTable data structure.
+
+### Challenge
+Create a HashTable that stores key/value pairs. HashTable should contain methods to add a key-value pair, check if the HashTable contains a key, 
+return a value using a key, and also a method to hash the keys.  
+### Approach and Efficiency
+add():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+get():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+contains():<br>
+- Time: O(1)<br>
+- Space: O(1)(<br>
+
+
+### API
+#### HashTable Methods
+add(): Takes in a string key and int value and stores them in the HashTable, throwing an exception if that key already exists.
+
+get(): Takes in a string key and returns the int value that it is paired with in the HashTable. If the given key does not exist in the 
+HashTable, it throws an error. 
+
+contains(): Takes in a string key and checks if that key exists in the HashTable. If it does, the method returns true. If not, it returns false.
+
+ 
+## RepeatedWord
+This method takes in a large string and returns the first repeated word contained in that string. 
+
+### Challenge
+Create a method that takes in large string and returns the first word to occur more than once in that 
+provided string. 
+### Approach and Efficiency
+repeatedWord():<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges401/src/test/resources/31whiteboard.png) 
+
+
