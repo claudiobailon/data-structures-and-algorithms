@@ -18,14 +18,8 @@
 [Challenge 27: Merge Sort](#merge-sort) <br>
 [Challenge 28: Quick Sort](#merge-sort) <br>
 [Challenge 30: HashTable](#hashtable) <br>
-
-
-
-
-
-
-
-
+[Challenge 31: RepeatedWord](#repeatedword) <br>
+[Challenge 32: TreeIntersection](#treeintersection) <br>
 
 
 ## Reverse an Array
@@ -404,4 +398,16 @@ repeatedWord():<br>
 ### Solution
 ![Whiteboard](challenges401/src/test/resources/31whiteboard.png) 
 
+## TreeIntersection
+This method takes in two trees and returns dublicates.
 
+### Challenge
+Create a method that takes in two binary trees and returns a set that contains all the values that appear in 
+both trees. 
+### Approach and Efficiency
+treeIntersection():<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges401/src/test/resources/32Whiteboard.png) 
