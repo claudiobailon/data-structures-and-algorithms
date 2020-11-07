@@ -16,10 +16,11 @@
 [Challenge 18: FizzBuzz](#fizzBuzz) <br>
 [Challenge 26: Insertion Sort](#insertion-sort) <br>
 [Challenge 27: Merge Sort](#merge-sort) <br>
-[Challenge 28: Quick Sort](#merge-sort) <br>
+[Challenge 28: Quick Sort](#quick-sort) <br>
 [Challenge 30: HashTable](#hashtable) <br>
 [Challenge 31: RepeatedWord](#repeatedword) <br>
 [Challenge 32: TreeIntersection](#treeintersection) <br>
+[Challenge 33: Left Join](#left-join) <br>
 
 
 ## Reverse an Array
@@ -411,3 +412,17 @@ treeIntersection():<br>
 
 ### Solution
 ![Whiteboard](challenges401/src/test/resources/32Whiteboard.png) 
+
+## Left Join
+This method performs a left join on two hashmaps. 
+
+### Challenge
+This method takes in two hashmaps and returns an array of arrays that has the key from the first hashmap and the value that 
+goes with that key from either hashmap. If the second hashmap does not contain a key from the first, return null. 
+### Approach and Efficiency
+leftJoin:<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges401/src/test/resources/33whiteboard.png) 
