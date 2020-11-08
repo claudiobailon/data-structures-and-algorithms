@@ -60,30 +60,31 @@ public class GraphTest {
         assertTrue(test.getNodes().contains(node4));
     }
 
-    @Test public void testGetNeighbors() throws Exception {
+    @Test public void testGetNeighborsAndSize() throws Exception {
         Graph test = new Graph();
         Graph.Node node = test.addNode("Connell");
         Graph.Node node2 = test.addNode("Othello");
         Graph.Node node3= test.addNode("Warden");
         Graph.Node node4= test.addNode("Lind");
+        Graph.Node node5= test.addNode("Pasco");
+
 
         test.addEdge(node, node2);
         test.addEdge(node, node3);
         test.addEdge(node, node4);
-        test.addEdge(node2, node4);
-        test.addEdge(node4, node3);
+        test.addEdge(node5, node4);
+
+
 
         ArrayList<Graph.Edge> edgesOfConnell = test.getNeighbors(node);
-        for(Graph.Node destination: )
-        ArrayList<Graph.Edge> edgesOfOthello = test.getNeighbors(node2);
-        ArrayList<Graph.Edge> edgesOfWarden = test.getNeighbors(node3);
-        ArrayList<Graph.Edge> edgesOfLind = test.getNeighbors(node4);
-//        System.out.println(edgesOfConnell.size());
-        assertEquals(3,edgesOfConnell.size());
-        System.out.println(edgesOfConnell);
-        System.out.println(node2);
-        assertTrue(edgesOfConnell.contains(node2));
-
+        ArrayList<Graph.Node> connellDestinations= new ArrayList<>();
+        for(Graph.Edge edge :edgesOfConnell) connellDestinations.add(edge.destination);
+        assertTrue(connellDestinations.contains(node2));
+        assertTrue(connellDestinations.contains(node3));
+        assertTrue(connellDestinations.contains(node4));//connell should have all 3 other destinations as neigbors
+        assertEquals(3,connellDestinations.size());
+        assertFalse(connellDestinations.contains(node5));//should not contain an edge that is not it's neighbor
+        assertEquals(5,test.size());//Graph is of size 5
     }
 
 }
