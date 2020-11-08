@@ -21,6 +21,8 @@
 [Challenge 31: RepeatedWord](#repeatedword) <br>
 [Challenge 32: TreeIntersection](#treeintersection) <br>
 [Challenge 33: Left Join](#left-join) <br>
+[Challenge 35: Graph](#graph) <br>
+
 
 
 ## Reverse an Array
@@ -415,6 +417,34 @@ treeIntersection():<br>
 
 ## Left Join
 This method performs a left join on two hashmaps. 
+## HashTable
+This creates a HashTable data structure.
+
+### Challenge
+Create a HashTable that stores key/value pairs. HashTable should contain methods to add a key-value pair, check if the HashTable contains a key, 
+return a value using a key, and also a method to hash the keys.  
+### Approach and Efficiency
+add():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+get():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+contains():<br>
+- Time: O(1)<br>
+- Space: O(1)(<br>
+
+
+### API
+#### HashTable Methods
+add(): Takes in a string key and int value and stores them in the HashTable, throwing an exception if that key already exists.
+
+get(): Takes in a string key and returns the int value that it is paired with in the HashTable. If the given key does not exist in the 
+HashTable, it throws an error. 
+
+contains(): Takes in a string key and checks if that key exists in the HashTable. If it does, the method returns true. If not, it returns false.
 
 ### Challenge
 This method takes in two hashmaps and returns an array of arrays that has the key from the first hashmap and the value that 
@@ -426,3 +456,43 @@ leftJoin:<br>
 
 ### Solution
 ![Whiteboard](challenges401/src/test/resources/33whiteboard.png) 
+
+## Graph
+This creates a graph data structure. 
+
+### Challenge
+Implement a graph with methods to add nodes, add edges, get nodes( returns all nodes in some sort of data set), 
+get neighbors(returns neighboring nodes of the current node in a data set), and get size of graph. 
+### Approach and Efficiency
+addNode():<br>
+- Time: O(1)<br>
+- Space: O(n)<br>
+
+addEdge():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+getNodes():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+getNeighbors():<br>
+- Time: O(1)<br>
+- Space: O(1)<br>
+
+size():<br>
+- Time: O(1)<br>
+- Space: O(1)(<br>
+
+
+### API
+#### HashTable Methods
+addNode(): Takes in a String and then creates a node with the String as it's value and adds it to the Graph. Returns that Node.
+
+addEdge(): Takes in two nodes ( with the ability to add an int weight) and creates an edge that connects the two nodes to each other.
+
+getNodes(): Returns an ArrayList that contains all nodes in the graph. 
+
+getNeighbors(): Takes in a node and returns an ArrayList with all connecting edges. 
+
+size(): returns an int of the number of nodes in the graph.  
