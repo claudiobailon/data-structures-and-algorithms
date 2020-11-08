@@ -22,6 +22,7 @@
 [Challenge 32: TreeIntersection](#treeintersection) <br>
 [Challenge 33: Left Join](#left-join) <br>
 [Challenge 35: Graph](#graph) <br>
+[Challenge 36: Breadth First Graph](#breadth-first-graph) <br>
 
 
 
@@ -415,8 +416,7 @@ treeIntersection():<br>
 ### Solution
 ![Whiteboard](challenges401/src/test/resources/32Whiteboard.png) 
 
-## Left Join
-This method performs a left join on two hashmaps. 
+
 ## HashTable
 This creates a HashTable data structure.
 
@@ -446,6 +446,8 @@ HashTable, it throws an error.
 
 contains(): Takes in a string key and checks if that key exists in the HashTable. If it does, the method returns true. If not, it returns false.
 
+## Left Join
+This method performs a left join on two hashmaps. 
 ### Challenge
 This method takes in two hashmaps and returns an array of arrays that has the key from the first hashmap and the value that 
 goes with that key from either hashmap. If the second hashmap does not contain a key from the first, return null. 
@@ -486,7 +488,7 @@ size():<br>
 
 
 ### API
-#### HashTable Methods
+#### Graph Methods
 addNode(): Takes in a String and then creates a node with the String as it's value and adds it to the Graph. Returns that Node.
 
 addEdge(): Takes in two nodes ( with the ability to add an int weight) and creates an edge that connects the two nodes to each other.
@@ -496,3 +498,16 @@ getNodes(): Returns an ArrayList that contains all nodes in the graph.
 getNeighbors(): Takes in a node and returns an ArrayList with all connecting edges. 
 
 size(): returns an int of the number of nodes in the graph.  
+
+## Breadth First Graph
+This method performs a breadth first traversal of a graph. 
+### Challenge
+Take in a a starting node and traverse the graph in breadth first order, meaning that each neighbor of the node is visited before any 
+neighbors of the neighbor node are traversed.  Return a collection of nodes in the order they were visited and display them. 
+### Approach and Efficiency
+breadthFirst:<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges401/src/test/resources/36whiteboard.png) 
