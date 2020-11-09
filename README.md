@@ -23,6 +23,7 @@
 [Challenge 33: Left Join](#left-join) <br>
 [Challenge 35: Graph](#graph) <br>
 [Challenge 36: Breadth First Graph](#breadth-first-graph) <br>
+[Challenge 37: Get Edges](#get-edges) <br>
 
 
 
@@ -511,3 +512,16 @@ breadthFirst:<br>
 
 ### Solution
 ![Whiteboard](challenges401/src/test/resources/36whiteboard.png) 
+
+## Get Edges
+Given a graph of flights and array of cities, return if the plan is possible and the cost.
+### Challenge
+Take in a graph with direct flights and an array of cities. First, check if it is possible to take direct flights from each city in the 
+array to the city after it in the array. If it is, return true and the total cost of all flights taken.  If not, return false and 0
+### Approach and Efficiency
+planFlight:<br>
+- Time: O(n)<br>
+- Space: O(1)<br>
+
+### Solution
+![Whiteboard](challenges401/src/test/resources/37whiteboard.png) 
