@@ -24,6 +24,7 @@
 [Challenge 35: Graph](#graph) <br>
 [Challenge 36: Breadth First Graph](#breadth-first-graph) <br>
 [Challenge 37: Get Edges](#get-edges) <br>
+[Challenge 38: Depth First Graph](#depth-first-graph) <br>
 
 
 
@@ -525,3 +526,15 @@ planFlight:<br>
 
 ### Solution
 ![Whiteboard](challenges401/src/test/resources/37whiteboard.png) 
+
+## Depth First Graph
+This method performs a breadth first traversal of a graph. 
+### Challenge
+Take in a graph and return a list of nodes in their pre-order depth-first traversal order. 
+### Approach and Efficiency
+depthFirst:<br>
+- Time: O(n)<br>
+- Space: O(n)<br>
+
+### Solution
+![Whiteboard](challenges401/src/test/resources/38whiteboard.png)
